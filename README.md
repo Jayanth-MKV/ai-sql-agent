@@ -7,6 +7,8 @@
 
 `Check the Backend app :` [`BACKEND`](https://github.com/Jayanth-MKV/db-chatapp)
 
+`Check the Demo Video Here :` [`Video`](https://ai-sql-agent.vercel.app/sql-agent.mp4)
+
 ## Running locally
 
 You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
