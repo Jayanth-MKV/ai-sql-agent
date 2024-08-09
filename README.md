@@ -1,63 +1,76 @@
 <a href="https://ai-sql-agent.vercel.app/">
-  <img alt="Next.js 14 and App Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png">
-  <h1 align="center">Next.js AI Chatbot</h1>
+  <video alt="sql-agent-chatbot" src="https://ai-sql-agent.vercel.app/sql-agent.mp4">
 </a>
+<h1 align="center">SQL Agent AI Chatbot</h1>
 
-<p align="center">
-  An open-source AI chatbot app template built with Next.js, the Vercel AI SDK, OpenAI, and Vercel KV.
-</p>
+`Check the Deployed app :` [`APP`](https://ai-sql-agent.vercel.app/)
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
-</p>
-<br/>
-
-## Features
-
-- [Next.js](https://nextjs.org) App Router
-- React Server Components (RSCs), Suspense, and Server Actions
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) for streaming chat UI
-- Support for OpenAI (default), Anthropic, Cohere, Hugging Face, or custom AI chat models and/or LangChain
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - [Radix UI](https://radix-ui.com) for headless component primitives
-  - Icons from [Phosphor Icons](https://phosphoricons.com)
-- Chat History, rate limiting, and session storage with [Vercel KV](https://vercel.com/storage/kv)
-- [NextAuth.js](https://github.com/nextauthjs/next-auth) for authentication
-
-## Model Providers
-
-This template ships with OpenAI `gpt-3.5-turbo` as the default. However, thanks to the [Vercel AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co), or using [LangChain](https://js.langchain.com) with just a few lines of code.
-
-## Deploy Your Own
-
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot&from=templates&skippable-integrations=1&env=OPENAI_API_KEY%2CAUTH_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{)
-
-## Creating a KV Database Instance
-
-Follow the steps outlined in the [quick start guide](https://vercel.com/docs/storage/vercel-kv/quickstart#create-a-kv-database) provided by Vercel. This guide will assist you in creating and configuring your KV database instance on Vercel, enabling your application to interact with it.
-
-Remember to update your environment variables (`KV_URL`, `KV_REST_API_URL`, `KV_REST_API_TOKEN`, `KV_REST_API_READ_ONLY_TOKEN`) in the `.env` file with the appropriate credentials provided during the KV database setup.
+`Check the Backend app :` [`BACKEND`](https://github.com/Jayanth-MKV/db-chatapp)
 
 ## Running locally
 
 You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
-
 ```bash
 pnpm install
 pnpm dev
 ```
+or
+```bash
+npm install
+npm run dev
+
 
 Your app template should now be running on [localhost:3000](http://localhost:3000/).
+
+
+## Key Functionalities
+- Natural Language Query Input
+- Formatted Display of Query Results
+- Responsive Design and attractive UI intgration
+- Loader indicating the steps taken by AI Agent
+- UI Messages state management
+- Error Handling and API Integration
+
+## API endpoints
+/api/query - Processes natural language queries and returns data relevant to the input.
+/ - chat conversation endpoint
+/new - Create a new chat
+/auth/* - Paused for now
+
+## Key Challenges Faced
+- Handling Streaming Responses:
+Managing streaming responses from the backend was complex, as the data needed to be parsed and displayed in the correct format
+- Real-Time Updates for Long-Running Queries:
+Implementing real-time updates for long-running queries using the Fetch API required careful management of asynchronous operations.
+- Implementing the state management and UI messages: This included the integration of the ai/rsc library with the messages of the conversation.
+
+## Future Improvements
+
+- Implement a customizable dashboard where users can save their favorite queries.
+- Enable exporting of query results to CSV or Excel formats.
+- Implement server-side rendering (SSR) for faster initial load times.
+- Add keyboard shortcuts for faster navigation and query submission.
+- Implementing charts and graphs for applicable query results would make the data more interpretable.
+
+
+## Queries That work good:
+
+![ss1](https://ai-sql-agent.vercel.app/ss1.png)
+![ss2](https://ai-sql-agent.vercel.app/ss2.png)
+![ss3](https://ai-sql-agent.vercel.app/ss3.png)
+![ss4](https://ai-sql-agent.vercel.app/ss4.png)
+![ss5](https://ai-sql-agent.vercel.app/ss5.png)
+
+
+## TECH
+
+- [Next.js](https://nextjs.org) App Router
+- React Server Components (RSCs), Suspense, and Server Actions
+- [Vercel AI SDK](https://sdk.vercel.ai/docs) for streaming chat UI
+- Support for custom AI chat models and/or LangChain
+- [shadcn/ui](https://ui.shadcn.com)
+  - Styling with [Tailwind CSS](https://tailwindcss.com)
+  - [Radix UI](https://radix-ui.com) for headless component primitives
+  - Icons from [Phosphor Icons](https://phosphoricons.com)
+- [NextAuth.js](https://github.com/nextauthjs/next-auth) for authentication
