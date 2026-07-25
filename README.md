@@ -2,7 +2,7 @@
 
 # Advanced Agents Cookbooks
 
-**Notebook lessons and a full-stack SQL agent for studying LangGraph, memory, tool use, and streamed agent output.**
+**Practical agent-engineering lessons and an interactive data assistant for studying planning, memory, tools, and streamed experiences.**
 
 [![LangGraph](https://img.shields.io/badge/LangGraph-notebooks-1f2937.svg)](ai-agents-langgraph)
 [![Next.js 14](https://img.shields.io/badge/Next.js-14.2.4-000000?logo=nextdotjs&logoColor=white)](ai-sql-agent/ai-sql-agent-frontend/package.json)
@@ -14,7 +14,7 @@
 
 ## What is it?
 
-This repository combines two notebook learning tracks with one larger application. The notebooks explore graph-based agents and long-term memory; the SQL Agent pairs a FastAPI/LangChain backend with a Next.js chat interface over a committed SQLite dataset.
+This repository combines two notebook learning tracks with one larger application. The notebooks explore agent behavior and long-term memory; the interactive assistant connects natural-language questions to structured data with streamed progress and results.
 
 The directories are independent. There is no root package, shared environment, or command that runs the entire collection.
 
