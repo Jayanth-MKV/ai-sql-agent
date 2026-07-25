@@ -18,6 +18,8 @@ This repository combines two notebook learning tracks with one larger applicatio
 
 The directories are independent. There is no root package, shared environment, or command that runs the entire collection.
 
+Individual frameworks and sample applications may change as the collection grows; the lasting focus is practical agent design, memory, tool use, and reliable user-facing workflows.
+
 ## Cookbook map
 
 | Track | Contents | Focus |
